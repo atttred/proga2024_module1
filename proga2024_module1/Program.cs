@@ -1,10 +1,21 @@
-﻿namespace proga2024_module1
+﻿using System;
+
+namespace proga2024_module1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Check1");
+            ArrayManipulator.GenerateRandomArray(10, 0, 100);
+            Console.WriteLine("Max: " + ArrayManipulator.FindMax());
+            ArrayManipulator.SortArray();
+            Console.WriteLine("Sorted array:");
+            foreach (int i in ArrayManipulator.MyArray)
+            {
+                Console.Write(i + " ");
+            }
+            
+            Console.ReadKey();
         }
     }
 }
